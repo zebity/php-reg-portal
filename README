@@ -1,32 +1,22 @@
-PHP RegPortal - README
+PHP RegPortl is:
+A very simple PHP based user registration system for
+PHP/Apache/MySQL/PostgreSQL based applications
 
-Contents:
+This software provides a PHP based user registration portal and authentication
+system. The application uses Apache mod_dbd/mod_authn_dbd
+(or .htaccess/.htpasswd) to provide RDMS independent authentication.
 
-1. Installation & Configuration
-2. Considerations
+The registration Portal is built using PHP with PHP Data Objects (PDO) to
+isolate it from specific RDBMS providers. The system is a substantial
+modification and rewrite of the "Deadlock - User Management System" and was
+created to address the limitation of this while still having the useful
+functionality and not being over encumbered with to many application
+development frameworks (ie keep it simple).
 
-1. Installation & Configuration
+NOTE 1: This code was migrated by author from Google Code Archive:
+https://code.google.com/archive/p/php-reg-portal/
 
-The PHP RegPortal has 3 set of user interfaces and functionality
-these are targeted at: system administrators, user adminstrators and end users.
-
-To correctly configure PHP RegPortal so it is secure you should:
-
-a) Configure Apache so that the install directory is protected.
-	The install directory has an example htaccess file to use as template for protecting the directory.
-	This should only be accessible to the system adminstrators.
-b) Ensure the admin is protected so only authourised adminstrators can access it.
-	As part of bootstrapping PHP RegPortal, you can configure this as initial area to be protected
-	and have adminstration specific RDBMS conifigured to handle authentication to this realm.
-c) Users should use access RegPortal via embedded links, which ensure that the application specific configuration
-	file is passed in as a parameter.
-d) Make use of the roles and permissions that have been granted as part of installing a RegPortal database.
-	The three roles created are <prefix>_user, <prefix>_admin, <prefix>_owner.
-	Each of these roles is is defined as "NOLOGIN" and are used by granting role to connected users when using the database
-	The following set of permissions have been defined for the roles:
-	user - Has Update Access to <prefix>_users, to allow then to register themselves and updated their own password
-		and check credentials. Tney also have Update access to login, to allow recording of failed login attempts
-	admin - Has Delete acess to <prefix>_users, to allow then to remove users
-	owner - Has Update access to emails and config configuration data. This allows them to change behavior of RegPortal
-	NOTE: owner inherits admin rights who inherits user rights.
+NOTE 2: The "Deadlock - User Management System" that code was originally
+forked from is on sourceforge here:
+https://sourceforge.net/projects/phpdeadlock/
 
