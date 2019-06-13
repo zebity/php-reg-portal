@@ -1,0 +1,62 @@
+  <tr>
+    <td colspan="2" class="style2">To register, please fill in the required fields below. All fields are required except for those marked &quot;optional&quot;. Before filling in a field, it is advised that you move your mouse over the blue question mark for an explanation of what is required in that field. This will prevent errors and make the registration process easier. 
+	  <!-- $BeginBlock errortable -->
+	  <table width="95%" height="24" border="0" align="center">
+	    <tr>
+	      <td height="20">
+	        <div class="style9"><ul>
+	          <!-- $BeginBlock errors --><li>${error}</li><!-- $EndBlock errors -->
+          </ul></div></td>
+        </tr>
+        </table>
+	  <!-- $EndBlock errortable -->
+	  <br />
+	  <form action="${phpself}" method="post">
+	    <table width="73%" border="0" align="center">
+	      <tr>
+	        <td width="47%" class="style5">First Name:</td>
+          <td width="53%"><input name="firstname" maxlength="15" type="text" id="firstname" value="${firstname_value}" /><a href="#" class="hintanchor" onMouseover="showhint('Please enter your first name. This must be 1-15 characters and alphanumeric.', this, event, '150px')">[?]</a></td>
+        </tr>
+	      <tr>
+	        <td class="style5">Last Name: </td>
+          <td><input name="lastname" maxlength="15" type="text" id="lastname" value="${lastname_value}" /><a href="#" class="hintanchor" onMouseover="showhint('Please enter your last name. This must be 1-15 characters and alphanumeric.', this, event, '150px')">[?]</a></td>
+        </tr>
+	      <tr>
+	        <td class="style5">Email:</td>
+          <td><input name="email" type="text" id="email" value="${email_value}" /><a href="#" class="hintanchor" onMouseover="showhint('Please enter your email address. This email address must be valid.', this, event, '150px')">[?]</a></td>
+        </tr>
+	      <tr>
+	        <td class="style5">Phone<!-- $BeginBlock optional_phone --> (optional) <!-- $EndBlock optional_phone -->: </td>
+          <td><input name="phone" type="text" id="phone" value="${phone_value}" /><a href="#" class="hintanchor" onMouseover="showhint('Please enter your phone number. This should be ${phone_digits} digits and contain only numbers.', this, event, '150px')">[?]</a></td>
+        </tr>
+	      <tr>
+	        <td class="style5">Country<!-- $BeginBlock optional_country --> (optional) <!-- $EndBlock optional_country -->:</td>
+          <td>
+            ${country_selects}</td>
+        </tr>
+	      <tr class="style5">
+	        <td colspan="2" class="style2">&nbsp;</td>
+          </tr>
+	      <tr>
+	        <td class="style5">Username:</td>
+          <td><input name="username" maxlength="15" type="text" id="username" value="${username_value}" /><a href="#" class="hintanchor" onMouseover="showhint('Please choose a username. This must be alphanumeric and contain 5-10 characters.', this, event, '150px')">[?]</a></td>
+        </tr>
+	      <tr>
+	        <td class="style5">Password:</td>
+          <td><input name="password" maxlength="10" type="password" id="password" /><a href="#" class="hintanchor" onMouseover="showhint('Please choose a password. For maximum security this must be 6-10 characters and must contain at least one letter and one number', this, event, '150px')">[?]</a></td>
+        </tr>
+	      <tr>
+	        <td class="style5">Confirm Password: </td>
+          <td><input name="password2" maxlength="10" type="password" id="password2" /><a href="#" class="hintanchor" onMouseover="showhint('Please confirm the password you entered above.', this, event, '150px')">[?]</a></td>
+        </tr>
+	      <tr>
+	        <td colspan="2" class="style2">&nbsp;</td>
+          </tr>
+	      <tr>
+	        <td>&nbsp;</td>
+          <td><input type="hidden" name="submit" value="1" /><input type="submit" value="Register" /></td>
+        </tr>
+        </table>
+	  <br />
+      </form></td>
+  </tr>

@@ -1,0 +1,65 @@
+  <tr>
+    <td colspan="2" class="style2">To edit your account, change the values in the below form, then click Update. All fields are required except for those marked &quot;optional&quot;. 
+      <!-- $BeginBlock errortable -->
+      <table width="95%" height="24" border="0" align="center">
+        <tr>
+          <td height="20">
+            <div class="style9"><ul>
+			<!-- $BeginBlock error --><li>${error}</li><!-- $EndBlock error -->
+          </ul></div></td>
+        </tr>
+        </table>
+      <!-- $EndBlock errortable -->
+	  <form action="${phpself}" method="post">
+	    <table width="73%" border="0" align="center">
+	      <tr>
+	        <td width="47%" class="style5">First Name:</td>
+          <td width="53%"><input name="firstname" maxlength="15" type="text" id="firstname" value="${firstname_value}" />
+            <a href="#" class="hintanchor" onMouseover="showhint('Please enter your first name. This must be 1-15 characters and alphanumeric.', this, event, '150px')">[?]</a></td>
+        </tr>
+	      <tr>
+	        <td class="style5">Last Name: </td>
+          <td><input name="lastname" maxlength="15" type="text" id="lastname" value="${lastname_value}" />
+            <a href="#" class="hintanchor" onMouseover="showhint('Please enter your last name. This must be 1-15 characters and alphanumeric.', this, event, '150px')">[?]</a></td>
+        </tr>
+	      <tr>
+	        <td class="style5">Email:</td>
+          <td><input name="email" type="text" id="email" value="${email_value}" /><a href="#" class="hintanchor" onMouseover="showhint('Please enter your email address. This email address must be valid.', this, event, '150px')">[?]</a></td>
+        </tr>
+	      <tr>
+	        <td class="style5">Phone<!-- $BeginBlock optional_phone --> (optional) <!-- $EndBlock optional_phone -->: </td>
+          <td><input name="phone" type="text" id="phone" value="${phone_value}" /><a href="#" class="hintanchor" onMouseover="showhint('Please enter your phone number. This should be <?php echo $config['phone_digits']; ?> digits and contain only numbers.', this, event, '150px')">[?]</a></td>
+        </tr>
+	      <tr>
+	        <td class="style5">Country<!-- $BeginBlock optional_country --> (optional) <!-- $EndBlock optional_country -->:</td>
+          <td>
+            ${country_selects}            </td>
+        </tr>
+	      <tr class="style5">
+	        <td colspan="2" class="style2">&nbsp;</td>
+          </tr>
+	      
+	      <tr>
+	        <td class="style5">Username:</td>
+          <td><input type="text" disabled="disabled" value="${username_value}" /><a href="#" class="hintanchor" onMouseover="showhint('Please choose a username. This must be alphanumeric and contain 5-10 characters.', this, event, '150px')"></a></td>
+        </tr>
+	      <tr>
+	        <td class="style5"> New Password:</td>
+          <td><input name="password" maxlength="10" type="password" id="password" /><a href="#" class="hintanchor" onMouseover="showhint('Enter the new password here. If you want to keep the current password, leave this box blank.', this, event, '150px')">[?]</a></td>
+        </tr>
+	      <tr>
+	        <td class="style5">Confirm Password: </td>
+          <td><input name="password2" maxlength="10" type="password" id="password2" /><a href="#" class="hintanchor" onMouseover="showhint('If you are changing the password, confirm what you entered above.', this, event, '150px')">[?]</a></td>
+        </tr>
+	      <tr>
+	        <td class="style2">&nbsp;</td>
+          <td class="style2">&nbsp;</td>
+        </tr>
+	      <tr>
+	        <td>&nbsp;</td>
+          <td><input type="hidden" name="submit" value="1" /><input type="hidden" name="username" value="${username}" /><input type="submit" value="Update" /></td>
+        </tr>
+        </table>
+	  <br />
+      </form></td>
+  </tr>

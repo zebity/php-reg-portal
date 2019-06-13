@@ -1,0 +1,5 @@
+ALTER TABLE `deadlock_logins` ADD `ip` VARCHAR( 50 ) NOT NULL ;
+ALTER TABLE `deadlock_logins` ADD `type` VARCHAR( 20 ) NOT NULL AFTER `id` ;
+ALTER TABLE `deadlock_logins` CHANGE `username` `username` VARCHAR( 30 ) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL;
+INSERT INTO `deadlock_config` (`option_name` , `value`) VALUES ('prune_inactive_users', 'true');
+INSERT INTO `deadlock_config` (`option_name` , `value`) VALUES ('admin_username', 'admin');

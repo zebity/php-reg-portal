@@ -1,0 +1,7 @@
+# <Directory /usr/local/www/apache22/data/regportal-install>
+AuthType Digest
+AuthName "Site Admin"
+AuthDigestDomain /regportal/installl http://www.domain/regportal/install
+AuthUserFile /usr/local/www/auth/local-digest
+Require valid-user
+# </Directory>

@@ -1,0 +1,39 @@
+  <tr>
+    <td height="22" colspan="2" class="style2">Welcome ${firstname}. Your account information is below. If you would like to edit any of the information, click Edit.</td>
+  </tr>
+  <tr>
+    <td height="19" colspan="2"><br />
+      <table width="89%" border="0">
+      <tr>
+        <td width="29%" class="style5">Full Name:</td>
+        <td width="71%" class="style2">${firstname} ${lastname}</td>
+      </tr>
+      <tr>
+        <td class="style5">Username:</td>
+        <td class="style2">${username}</td>
+      </tr>
+      <tr>
+        <td class="style5">Email Address: </td>
+        <td class="style2">${email}</td>
+      </tr>
+      <tr>
+        <td class="style5">Country:</td>
+        <td class="style2">${country}</td>
+      </tr>
+      <tr>
+        <td class="style5">Phone:</td>
+        <td class="style2">${phone}</td>
+      </tr>
+      <tr>
+        <td class="style5">Date Registered:</td>
+        <td class="style2">${registered}</td>
+      </tr>
+    </table>
+      <br />
+      <input type="submit" value="Edit" onclick="window.location='./editaccount.php'" />
+      <input type="submit" value="Logout" onclick="window.location='./login.php?action=logout'" />
+      <br />
+      <br/>
+      <input name="Button" type="button" value="Delete My Account" onclick="deleteaccount()" />
+      <br/><br/></td>
+  </tr>

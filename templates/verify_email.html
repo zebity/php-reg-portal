@@ -1,0 +1,32 @@
+  <tr>
+    <td colspan="2" class="style2">This page is to validate your email. You should have received an email with your verification code. Please enter the code you received below.<br />
+
+      <br /><!-- $BeginBlock error -->
+      <table width="77%" border="0" align="center">
+        <tr>
+          <td><span class="style9">Error:</span> <span class="style2">${error}</span></td>
+        </tr>
+      </table>
+      <!-- $EndBlock error -->
+      <form id="form1" name="form1" method="get" action="${phpself}">
+        <br />
+        <table width="50%" border="0" align="center">
+          <tr>
+            <td class="style2"><strong>Code:</strong></td>
+            <td><input name="code" type="text" id="code" /></td>
+          </tr>
+		  <!-- $BeginBlock usernamefield -->
+          <tr>
+            <td class="style2"><strong>Username:</strong></td>
+            <td><input name="username" type="text" id="username" /></td>
+          </tr>
+		  <!-- $EndBlock usernamefield -->
+          <tr>
+            <td>&nbsp;</td>
+            <td><!-- $BeginBlock hiddenusername --><input type="hidden" name="username" id="username" value="${username}" /><!-- $EndBlock hiddenusername --><input type="submit" value="Next&gt;&gt;" /></td>
+          </tr>
+        </table>
+        <br />
+      </form>
+      </td>
+  </tr>
